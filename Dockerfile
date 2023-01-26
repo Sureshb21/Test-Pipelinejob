@@ -1,6 +1,9 @@
-FROM centos:latest
+
+FROM ubuntu
 MAINTAINER umesh kumar<umesh.bncoe@gmail.com>
-RUN yum install httpd -y
-COPY index.html /var/www/html/
+RUN apt-get update && apt-get -y install apache2
+EXPOSE 80
+
+
 
 
